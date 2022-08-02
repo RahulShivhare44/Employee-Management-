@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>DisplayAll Employee</title>
+      <link rel="stylesheet" href="/stylesheets/style.css">
+
+</head>
+<body>
+   <div class="root">
+    <div class="subdiv" style="width:1200px;margin-top:-100px">
+        <div class="heading" style="display: flex;justify-content: center;align-items: center;font-size: 20px;font-weight: 600;" > 
+            Employee Registration List
+            <div style="position: fixed;margin-left: 1083px;margin-top: 5px;"><a href="/employee/employeeinterface"><i style="color: #27ae60;" class="material-icons prefix">person_add</i></a></div>     
+        </div>
+        <hr>
+        <table class="highlight">
+            <thead style="color: #ccc;">
+              <tr>
+                  <th>Employee ID</th>
+                  <th>Employee Name</th>
+                  <th>Birth Date</th>
+                  <th>Gender</th>
+                  <th>Address</th>
+                  <th>city</th>
+                  <th>Email Adrress<br>Contact Number</th>
+                  <th>picture</th>
+                  <th>Update</th>
+              </tr>
+            </thead>
+    
+            <tbody style="color: #ccc;">
+                <% data.map((item)=>{ 
+                 
+                 d=new Date(item.dob) 
+                 k=d.getFullYear()+'-'+d.getMonth()+'-'+d.getDate()
+                 %>  
+                 
+            <tr>
+                
+                <td><%=item.employeeid %></td>
+                <td><%=item.employeename %></td>
+                <td><%=k %></td>
+                <td><%=item.gender %></td>
+                <td><%=item.address %></td>
+                <td><%=item.tcity %></td>
+                <td><%=item.emailaddress %><br><%=item.contactnumber %></td>
+                <td><a href="/employee/displaybypicture?eid=<%=item.employeeid %>&en=<%=item.employeename %>&picture=<%=item.picture %>"><img src="/images/<%=item.picture %>" width="40"></a></td>    
+                <td><a href="/employee/displaybyid?eid=<%=item.employeeid %>" style="color: #ccc;">Edit/Delete</a></td>
+
+
+            </tr>
+              <% }) %> 
+            </tbody>
+          </table>
+                
+
+            
+
+        </div>
+    </div>
+
+</body>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

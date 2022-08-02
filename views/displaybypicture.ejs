@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>Edit Employee</title>
+      <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <form action="/employee/editpicture" method="post" enctype="multipart/form-data">
+      <input type="hidden" value="<%=eid %>" name="eid" id="eid">
+      <input type="hidden" value="<%=picture %>" name="oldpic" id="oldpic">  
+      <div class="root">
+            <div class="subdiv" style="width:500px">
+                <div class="heading" style="display: flex;justify-content: center;align-items: center;font-size: 20px;font-weight: 600;" > 
+                    Employee Registration
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col s12" style="display: flex;justify-content: center;font-size: 35px;font-weight: 400;color: #ccc;" >
+                    <%=en %>
+                  </div>      
+                </div>
+                <div class="row">
+                    <div class="col s12" style="display: flex;justify-content: center;font-size: 30px;font-weight: 400;" >
+                      <img src="/images/<%=picture %>" width="200">
+                    </div>      
+                </div>
+
+                <div class="row">
+                    <div class="col s12">
+                        <div class="file-field input-field">
+                            <div class="btn">
+                              <span>Upload Picture</span>
+                              <input type="file" name="picture">
+                            </div>
+                            <div class="file-path-wrapper">
+                              <input class="file-path validate" type="text">
+                            </div>
+                          </div> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 btnstyle"  >
+                        <button class="btn waves-effect waves-light" type="submit" style="width:100% ;" name="btn" value="Edit" >Edit
+                         <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div> 
+
+            </div>
+        </div>
+
+            
+
+        
+</form>
+</body>
+
+<!--JavaScript at end of body for optimized loading-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>

@@ -1,0 +1,48 @@
+body{
+  background-image: url('/images/tempback.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 95%;
+}
+.root{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #27ae60; */
+   height: 100vh;
+   
+}
+.subdiv{
+  width: 800px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, .6);
+  border-radius: 10px;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight:bold;
+    letter-spacing: 1px;
+    color:#27ae60;
+}
+.btnstyle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subdiv label{
+  font-size: 16px;
+  color: #ccc;
+}
+.subdiv input{
+  font-size: 15px !important;
+  color: #ccc;
+}
+.subdiv i{
+  color: #ccc;
+}
+
+
+
